@@ -1,0 +1,18 @@
+﻿@using BookShopOnline.Models;
+@model List<ChuDe>
+
+@{
+    ViewBag.Title = "GetListAll";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>GetListAll</h2>
+<h2 style="color:aquamarine">Hiện có: @ViewBag.message_count chủ đề</h2>
+<div>
+    <ol>
+        @foreach(var item in Model)
+            {
+                <li>@item.TenChuDe</li>
+            }
+    </ol>
+</div>

@@ -1,0 +1,14 @@
+﻿@using BookShopOnline.Models
+@model IEnumerable<BookShopOnline.Models.ChuDe>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>DANH MỤC SÁCH</h2>
+<h2>Tổng số lượng sách hiện có: @ViewBag.message</h2>
+    @foreach (var item in Model)
+    {
+        <a href="~/Views/Home/Index.cshtml">~/Views/Home/Index.cshtml</a>
+        <div>Tên sách: @item.TenSach - <span style="color: #ff6a00">Chủ đề: @item.TenSach</span> </div>
+    }

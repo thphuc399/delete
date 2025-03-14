@@ -1,0 +1,29 @@
+﻿@using BookShopOnline.Models;
+@model List<ChuDe>
+
+<div class="card" style="margin-top: 10px;">
+    <div class="card-header">Header</div>
+
+    <div class="card-body">
+       
+        <div>
+            <div class="list-group">
+                @foreach (var item in Model)
+                {
+                    <div class=" list-group-item">
+                    <a href="@Url.Action("BookIndexTopic", "Home", new {id=item.MaChuDe})">
+                        @item.TenChuDe
+                    </a>
+               </div>
+                }
+            </div>
+        </div>
+
+        @*<div style="color:blue; font-style:italic">
+            <a hrel="Topic/GetListAll">See more...</a>
+        </div>*@
+        <div>
+            @Html.ActionLink("See more", "GetListAll", "Topic")
+        </div>
+    </div>
+</div>

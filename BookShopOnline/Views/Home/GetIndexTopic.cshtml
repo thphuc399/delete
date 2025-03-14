@@ -1,0 +1,17 @@
+﻿@using BookShopOnline.Models;
+
+@{
+    ViewBag.Title = "GetIndexTopic";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2 style="color:#ffd800">Danh sách theo chủ đề</h2>
+<h3 style="color:aquamarine"></h3>
+<div>
+    @foreach(var item in Model)
+            {
+                <div>
+                    @item.TenSach
+                </div>
+            }
+</div>
